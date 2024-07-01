@@ -1,0 +1,12 @@
+,,,
+from,to,relation ,year
+wd,ayto_vip,1,2021
+wd,eotb,1,2020
+ds,ayto_vip,1,2021
+ds,eotb,1,2021
+kv,ayto_vip,1,2023
+ek,thth,1,2023
+kn,thth,1,2023
+ayto_vip,rtl,2,2019 - 2023
+thth,netflix,2,2019 - 2023
+eotb,rtl,2,2019 - 2023
