@@ -1,0 +1,31 @@
+
+Codebuch:
+
+Vertexattribute:
+
+name = ganzer Name von Person/Sendung/Sendergruppe
+id = festgelegte Abk. (bei Person Initialen)
+"type: 1 = Person, 2 = Sendung, 3 = Sendergruppe"
+
+type 1/Personen:
+
+"sex: 1 = female, 2 = male"
+age = Alter in Jahre
+followers_count = Anzahl der Instagram-Follower
+
+type 2/ Sendungen:
+
+ratings = Einschaltquote (welche Einheit aus welchem Jahr?)
+seasons = Anzahl der Staffeln
+"time = Zeitspanne der Ausstrahlung, wie angeben?"
+
+Edgeattribute:
+
+Relation:
+1 = hat teilgenommen (zwischen Person und Sendung)
+2 = gehört zu (zwischen Sendung und Sendergruppe)
+(3 = Liebesbeziehung?)
+
+Bei 1:
+
+year = Jahr der Teilnahme
