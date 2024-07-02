@@ -1,0 +1,52 @@
+---
+title: "Pretest Reality TV"
+author: "Deborah Herberg"
+date: "2024-07-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(tidygraph)
+library(igraph)
+library(ggraph)
+
+```
+
+
+```{r Datensatz einlesen, Netzwerk erstellen}
+
+# Einlesen der Edgelist
+el <- read.csv("https://raw.githubusercontent.com/deboherberg/Reality_Tv/main/reality_tv_edgelist.csv", header=T, as.is=T, sep = ",")
+
+# Einlesen der Nodelist
+nl <- read.csv("https://raw.githubusercontent.com/deboherberg/Reality_Tv/main/reality_tv_nodelist.csv", header=T, as.is=T, sep = ",")
+
+# Aufrufen der Edge und Nodelist (nur als Test)
+el 
+nl 
+
+# Erstellen des Graphenobjekts
+s <- tbl_graph(nodes = nl, edges = el, directed = TRUE)
+
+# Netzwerk aufrufen
+s
+
+```
+
+
+```{r Einfache Visualisierung des erstellten Objekt, echo=FALSE, fig.height=6, fig.width=9}
+
+# Einfache Visualisierung des erstellten Objekts
+plot(s,
+     asp = 0,
+     layout = layout_with_fr,
+     vertex.size = V(s_igraph)$size,
+     edge.arrow.size = 0.3,
+     main = "Reality TV Netzwerk",
+     sub = "n = Anzahl der Knoten, Knotengröße nach Degree-Wert/1.5, alle Relationen"
+)
+
+```
